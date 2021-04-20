@@ -181,3 +181,22 @@ Ul > li {
   font-size: 16px
   line-height: 1;
 }
+
+.social {
+  text-align: center;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 5px;
+}
+.social svg {
+  width: 50px;
+  height: auto;
+}
+
+footer {
+  display: inline-block;
+  width: 100%;
+  padding: 10px
+}
