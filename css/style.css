@@ -160,17 +160,15 @@ margin-bottom: -10px;
 }
 
 #navigation h3 {
-  text-align: center;
   font-size: 1.75em;
-
+  padding-top: 15px;
 }
 
 
 header {
   background-color: #0A2240;
-  padding: 10px;
+  padding: 5px 0 10px;
   margin: 0 px;
-  text-align: center;
   color: #E3E5E8;
   -webkit-box-shadow: 0px 12px 12px 0px rgba(10, 34, 64, 0.80);
 -moz-box-shadow:    0px 12px 12px 0px rgba(10, 34, 64, 0.80);
@@ -179,19 +177,11 @@ box-shadow:         0px 12px 12px 0px rgba(10, 34, 64, 0.80);
   width: 100%;
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
-}
-
 
 nav  > ul {
   list-style-type: none;
   padding:0;
-}
-
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav > ul > li > a {
@@ -209,7 +199,7 @@ nav > ul > li > a:hover {
 }
 
 main {
-  padding-top: 200px;
+  padding-top: 125px;
 }
 
 Ul > li {
@@ -301,12 +291,43 @@ margin: 0;
   to {transform: translate(100px, 48px);}
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
 
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
 
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
   text-align: unset;
   padding: 20px 0 13px;
@@ -347,6 +368,25 @@ nav {
 main {
   padding-top: 125px;
 }
+nav > ul > li {
+  display: inline-block;
+}
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
+
+nav > ul {
+  margin: 1em 0;
+}
+
+#navigation h3 {
+  font-size: 1.75em;
+    padding: 0;
+}
+
 
 }
 
@@ -359,6 +399,7 @@ Large devices (1024px or larger)
     padding: 10px;
     float: left;
   }
+
   .col-lg-5 {
     width: 40%;
     padding: 10px;
@@ -374,6 +415,14 @@ Large devices (1024px or larger)
   margin-left: auto;
   margin-right: auto;
 }
+nav > ul > li {
+  display: inline-block;
+}
+
+#navigation h3 {
+  font-size: 1.75em;
+    padding: 0;
+}
 }
 
 /* ==============================
@@ -383,4 +432,13 @@ X-large devices (1440px or larger)
   [class*="col-"] {
     float: left;
   }
+  nav > ul > li {
+  display: inline-block;
+}
+
+#navigation h3 {
+  font-size: 1.75em;
+  padding: 0;
+}
+
 }
